@@ -38,7 +38,7 @@ class Dashboard extends Component {
             <div>
                 <div>
                     <div>
-                        <AppHeader />
+                        <AppHeader/>
                     </div>
                     <div>
                         <QuoteList quotes={this.state.quotes}/>
@@ -48,6 +48,5 @@ class Dashboard extends Component {
         );
     }
 }
-
 
 export default Dashboard;
