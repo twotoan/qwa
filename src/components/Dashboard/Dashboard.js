@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import QuoteList from "./QuoteList";
-import AppHeader from "./AppHeader";
+import AppHeader from "../Layout/AppHeader";
 import axios from "axios";
 
 class Dashboard extends Component {
@@ -39,9 +39,6 @@ class Dashboard extends Component {
                 <div>
                     <div>
                         <AppHeader />
-                    </div>
-                    <div>
-
                     </div>
                     <div>
                         <QuoteList quotes={this.state.quotes}/>

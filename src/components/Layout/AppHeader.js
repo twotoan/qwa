@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -23,7 +23,7 @@ const styles = {
     },
 };
 
-class AppHeader extends React.Component {
+class AppHeader extends Component {
     state = {
         auth: true,
         anchorEl: null,
@@ -50,7 +50,8 @@ class AppHeader extends React.Component {
                             <Sidebar />
                         </IconButton>
                         <Typography variant="title" color="inherit" className={classes.flex}>
-                            Photos
+                            {/* Change Me */}
+                            <img src="https://kiwi-franchise-production.s3.amazonaws.com/revive/uploads/images/1/default_REVIVE-LOGO-PRIMARY2.png" alt="Revive! UK" />
                         </Typography>
                         {auth && (
                             <div>

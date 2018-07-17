@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-// import LoginForm from './components/LoginForm';
-import Dashboard from './components/Dashboard';
+import LoginForm from './components/Login/LoginForm';
 import './App.css';
 
 
@@ -9,7 +8,7 @@ import './App.css';
 class App extends Component {
     render() {
         return (
-            <Dashboard/>
+            <LoginForm/>
         );
     }
 }

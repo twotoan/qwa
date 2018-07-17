@@ -1,5 +1,5 @@
 import React from "react";
-import QuoteCard from "./QuoteCard";
+import QuoteCard from "../Quote/QuoteCard";
 
 function QuoteList(props) {
     return (
