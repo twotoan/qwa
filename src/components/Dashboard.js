@@ -1,49 +1,56 @@
-import React from 'react';
+import React, {Component} from 'react';
 import QuoteList from "./QuoteList";
-import PropTypes from 'prop-types';
-import {withStyles} from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
+import AppHeader from "./AppHeader";
+import axios from "axios";
 
-const quotes = [
-    {id: 1, name: "Leanne Graham"},
-    {id: 2, name: "Ervin Howell"},
-    {id: 3, name: "Clementine Bauch"},
-    {id: 4, name: "Patricia Lebsack"}
-];
+class Dashboard extends Component {
+    state = {
+        quotes: []
+    };
 
-const styles = theme => ({
-    root: {
-        flexGrow: 1,
-    },
-    paper: {
-        padding: theme.spacing.unit * 2,
-        textAlign: 'center',
-        color: theme.palette.text.secondary,
-    },
-});
+    componentDidMount() {
+        axios
+            .get("https://jsonplaceholder.typicode.com/users")
+            .then(response => {
 
-function Dashboard(props) {
-    const {classes} = props;
+                // create an array of quotes only with relevant data
+                const newQuotes = response.data.map(c => {
+                    return {
+                        id: c.id,
+                        name: c.name
+                    };
+                });
 
-    return (
-        <div className={classes.root}>
-            <Grid container spacing={24}>
-                <Grid item xs={12}>
-                    Header
-                </Grid>
-                <Grid item xs={3}>
-                    123456
-                </Grid>
-                <Grid item xs={9}>
-                    <QuoteList quotes={quotes}/>
-                </Grid>
-            </Grid>
-        </div>
-    );
+                // create a new "State" object without mutating
+                // the original State object.
+                const newState = Object.assign({}, this.state, {
+                    quotes: newQuotes
+                });
+
+                // store the new state object in the component's state
+                this.setState(newState);
+            })
+            .catch(error => console.log(error));
+    }
+
+    render() {
+        return (
+            <div>
+                <div>
+                    <div>
+                        <AppHeader />
+                    </div>
+                    <div>
+
+                    </div>
+                    <div>
+                        <QuoteList quotes={this.state.quotes}/>
+                    </div>
+                </div>
+            </div>
+        );
+    }
 }
 
-Dashboard.propTypes = {
-    classes: PropTypes.object.isRequired,
-};
 
-export default withStyles(styles)(Dashboard);
+export default Dashboard;
