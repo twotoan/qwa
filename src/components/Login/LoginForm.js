@@ -39,16 +39,19 @@ class LoginForm extends Component {
 
     handleSubmit = event => {
         event.preventDefault();
+        console.log('Username: ' + this.state.username);
+        console.log('Password: ' + this.state.password);
         axios.post('https://db86c963-c36e-4b17-96b2-e64db9e85bfd.mock.pstmn.io/login', {
             firstName: this.state.username,
             lastName: this.state.password
         })
             .then(function (response) {
                 console.log(response);
-
+                return window.location.href = '/dashboard';
             })
             .catch(function (error) {
                 console.log(error);
+                return window.location.href = '/';
             });
     };
 

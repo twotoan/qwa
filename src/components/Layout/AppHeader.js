@@ -47,7 +47,7 @@ class AppHeader extends Component {
                 <AppBar position="static">
                     <Toolbar>
                         <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
-                            <Sidebar />
+                            {/*<Sidebar />*/}
                         </IconButton>
                         <Typography variant="title" color="inherit" className={classes.flex}>
                             {/* Change Me */}

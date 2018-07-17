@@ -1,22 +1,18 @@
 import React, {Component} from "react";
-import {BrowserRouter as Router, Route, Link} from "react-router-dom";
-import Dashboard from '../Dashboard/Dashboard';
+import {Link} from "react-router-dom";
 
 class Navigation extends Component {
     render() {
         return (
-            <Router>
-                <div>
-                    <ul>
-                        <li>
-                            <Link to="/">Home</Link>
-                        </li>
-                    </ul>
 
-                    <Route exact path="/" component={Dashboard}/>
+            <div>
+                <ul>
+                    <li>
+                        <Link to="/dashboard">Home</Link>
+                    </li>
+                </ul>
+            </div>
 
-                </div>
-            </Router>
         )
     }
 }
