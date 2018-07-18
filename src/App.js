@@ -5,7 +5,7 @@ import Navigation from './components/Layout/Navigation';
 class App extends Component {
     render() {
         return (
-            <div>
+            <div className="header">
                 <Navigation/>
             </div>
         );

@@ -16,7 +16,10 @@ class Dashboard extends Component {
                 const newQuotes = response.data.map(c => {
                     return {
                         id: c.id,
-                        driver: c.customer.driver
+                        customer: c.customer,
+                        driver: c.customer.driver,
+                        mobiletel: c.customer.mobiletel,
+                        email: c.customer.email,
                     };
                 });
 
@@ -34,7 +37,7 @@ class Dashboard extends Component {
 
     render() {
         return (
-            <div>
+            <div className="container">
                 <QuoteList quotes={this.state.quotes}/>
             </div>
         );

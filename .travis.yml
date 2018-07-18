@@ -7,5 +7,6 @@ cache:
 script:
   - npm test
   - npm run build
+  - npm run unit
 on:
   branch: master

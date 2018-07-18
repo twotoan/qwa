@@ -24,6 +24,8 @@ function QuoteCard(props) {
                 <Grid item xs={12}>
                     <Paper className={classes.paper}>
                         {props.driver}
+                        {props.mobiletel}
+                        {props.email}
                     </Paper>
                 </Grid>
             </Grid>
@@ -32,7 +34,8 @@ function QuoteCard(props) {
 }
 
 QuoteCard.propTypes = {
-    customer: PropTypes.string.isRequired,
+    driver: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
     classes: PropTypes.object.isRequired
 };
 

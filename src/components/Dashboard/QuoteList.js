@@ -5,7 +5,13 @@ function QuoteList(props) {
     return (
         <div>
             {
-                props.quotes.map(c => <QuoteCard key={c.id} driver={c.driver}/>)
+                props.quotes.map(c =>
+                    <QuoteCard
+                        key={c.id}
+                        driver={c.driver}
+                        mobiletel={c.mobiletel}
+                        email={c.email}
+                    />)
             }
         </div>
     )
