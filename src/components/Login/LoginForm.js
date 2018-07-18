@@ -42,6 +42,7 @@ class LoginForm extends Component {
         console.log('Login Form Submitted..');
         event.preventDefault();
         console.log('Username: ' + this.state.username);
+        // TODO: Set up API mock..
         axios.post('https://db86c963-c36e-4b17-96b2-e64db9e85bfd.mock.pstmn.io/login', {
             firstName: this.state.username,
             lastName: this.state.password
@@ -74,7 +75,6 @@ class LoginForm extends Component {
                         <FormHelperText id="name-error-text">Error</FormHelperText>
                     </FormControl>
                     <Button
-                        //block
                         bssize="large"
                         disabled={!this.validateForm()}
                         type="submit"

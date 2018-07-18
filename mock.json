@@ -1,0 +1,26 @@
+{
+  "quotes": [
+    {
+      "id": 1,
+      "customer": {
+        "driver": "M DAVIES",
+        "salutation": "MR",
+        "fullname": "MATTHEW DAVIES",
+        "address1": "FLAT A",
+        "address2": "STREET NAME",
+        "postcode": "XXX XXXX",
+        "mobiletel": "07550000000",
+        "othertel": "01604000000",
+        "email": "email@email.com"
+      },
+      "vehicle": {
+        "registration": "WEB TEST",
+        "makemodel": "VW Golf"
+      },
+      "repairs": {
+        "product": "Alloy Repair",
+        "area": "OSF"
+      }
+    }
+  ]
+}

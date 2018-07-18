@@ -9,14 +9,14 @@ class Dashboard extends Component {
 
     componentDidMount() {
         axios
-            .get("https://jsonplaceholder.typicode.com/users")
+            .get("http://localhost:5678/quotes")
             .then(response => {
 
                 // create an array of quotes only with relevant data
                 const newQuotes = response.data.map(c => {
                     return {
                         id: c.id,
-                        name: c.name
+                        customer: c.customer
                     };
                 });
 
