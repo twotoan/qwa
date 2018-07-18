@@ -13,7 +13,7 @@ class Dashboard extends Component {
             .then(response => {
                 console.log(response);
                 // create an array of quotes only with relevant data
-                const newQuotes = response.data.map(c => {
+                const dashboardQuotes = response.data.map(c => {
                     return {
                         id: c.id,
                         customer: c.customer,
@@ -26,7 +26,7 @@ class Dashboard extends Component {
                 // create a new "State" object without mutating
                 // the original State object.
                 const newState = Object.assign({}, this.state, {
-                    quotes: newQuotes
+                    quotes: dashboardQuotes
                 });
 
                 // store the new state object in the component's state
