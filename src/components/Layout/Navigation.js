@@ -20,6 +20,7 @@ import NewQuotes from '../Quote/NewQuotes';
 const styles = {
     root: {
         width: '100%',
+        marginBottom: 15
     },
 };
 
@@ -40,14 +41,14 @@ class Navigation extends Component {
         const {value} = this.state;
 
         return (
-            <BottomNavigation
-                value={value}
-                onChange={this.handleChange}
-                showLabels
-                className={classes.root}
-            >
-                <Router>
-                    <div>
+            <Router>
+                <div>
+                    <BottomNavigation
+                        value={value}
+                        onChange={this.handleChange}
+                        showLabels
+                        className={classes.root}
+                    >
                         <BottomNavigationAction
                             label="Home"
                             icon={<HomeIcon/>}
@@ -69,13 +70,16 @@ class Navigation extends Component {
                             to="/quotes/new"
                             value="newquotes"
                         />
-                        <Route path="/home" component={AppHome}/>
-                        <Route path="/dashboard" component={Dashboard}/>
-                        <Route path="/quotes/new" component={NewQuotes}/>
 
-                    </div>
-                </Router>
-            </BottomNavigation>
+                    </BottomNavigation>
+
+                    <Route path="/home" component={AppHome}/>
+                    <Route path="/dashboard" component={Dashboard}/>
+                    <Route path="/quotes/new" component={NewQuotes}/>
+
+                </div>
+            </Router>
+
         )
     }
 }

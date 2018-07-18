@@ -1,11 +1,11 @@
-import React, {Component} from "react";
+import React from "react";
 
-class NewQuotes extends Component {
-    render() {
-        return (
-            <span>Im a new quote..</span>
-        )
-    }
+function NewQuotes() {
+    return (
+        <div>
+            I am a new quote..
+        </div>
+    )
 }
 
 export default NewQuotes;
