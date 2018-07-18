@@ -1,13 +1,8 @@
 // Core Imports
 import React, {Component} from "react";
-import { TransitionGroup, CSSTransition } from "react-transition-group";
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link,
-    Redirect
-} from "react-router-dom";
+//import { TransitionGroup, CSSTransition } from "react-transition-group";
+//import { BrowserRouter as Router, Switch, Route, Link, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 // Material UI Imports
 import PropTypes from 'prop-types';
 import {withStyles} from '@material-ui/core/styles';
@@ -22,7 +17,6 @@ import NewQuotes from '../Quote/NewQuotes';
 const styles = {
     root: {
         width: '100%',
-
     },
 };
 
