@@ -4,6 +4,7 @@ import {withStyles} from '@material-ui/core/styles';
 import Input from '@material-ui/core/Input';
 import InputLabel from '@material-ui/core/InputLabel';
 import FormControl from '@material-ui/core/FormControl';
+import FormHelperText from '@material-ui/core/FormHelperText';
 import Button from '@material-ui/core/Button';
 import axios from "axios";
 
@@ -65,14 +66,16 @@ class LoginForm extends Component {
                         <InputLabel htmlFor="username">Username</InputLabel>
                         <Input id="username" autoFocus type="text" value={this.state.username}
                                onChange={this.handleChange}/>
+                        <FormHelperText id="name-error-text">Error</FormHelperText>
                     </FormControl>
                     <FormControl className={classes.formControl}>
                         <InputLabel htmlFor="password">Password</InputLabel>
                         <Input id="password" type="password" value={this.state.password} onChange={this.handleChange}/>
+                        <FormHelperText id="name-error-text">Error</FormHelperText>
                     </FormControl>
                     <Button
-                        block
-                        bsSize="large"
+                        //block
+                        bssize="large"
                         disabled={!this.validateForm()}
                         type="submit"
                     >
