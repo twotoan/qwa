@@ -11,12 +11,12 @@ class Dashboard extends Component {
         axios
             .get("http://localhost:5678/quotes")
             .then(response => {
-
+                console.log(response);
                 // create an array of quotes only with relevant data
                 const newQuotes = response.data.map(c => {
                     return {
                         id: c.id,
-                        customer: c.customer
+                        driver: c.customer.driver
                     };
                 });
 

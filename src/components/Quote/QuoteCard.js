@@ -23,7 +23,7 @@ function QuoteCard(props) {
             <Grid container spacing={24}>
                 <Grid item xs={12}>
                     <Paper className={classes.paper}>
-                        {props.customer.name}
+                        {props.driver}
                     </Paper>
                 </Grid>
             </Grid>
@@ -32,7 +32,7 @@ function QuoteCard(props) {
 }
 
 QuoteCard.propTypes = {
-    name: PropTypes.string.isRequired,
+    customer: PropTypes.string.isRequired,
     classes: PropTypes.object.isRequired
 };
 
