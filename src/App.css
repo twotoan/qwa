@@ -45,3 +45,16 @@ body {
     opacity: 1;
     transition: opacity 250ms ease-in;
 }
+
+/**/
+.container .rowHeadings {
+    display: flex;
+}
+.container .rowHeadings .header {
+    width: 25%;
+    display: inline-block;
+}
+.container .column {
+    width: 25%;
+    display: inline-block;
+}

@@ -4,6 +4,10 @@ import {withStyles} from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import IconButton from '@material-ui/core/IconButton';
+import NewReleases from '@material-ui/icons/NewReleases';
+import OpenInBrowser from '@material-ui/icons/OpenInBrowser';
+
 
 const styles = theme => ({
     root: {
@@ -24,10 +28,21 @@ function QuoteCard(props) {
             <Grid container spacing={24}>
                 <Grid item xs={12}>
                     <Paper className={classes.paper}>
-                        <Typography variant="headline" component="h3">
+                        <IconButton>
+                            <NewReleases />
+                        </IconButton>
+                        <Typography>
                             {props.driver}
                         </Typography>
-                        {props.mobiletel} | {props.email}
+                        <Typography>
+                            {props.mobiletel}
+                        </Typography>
+                        <Typography>
+                            {props.email}
+                        </Typography>
+                        <IconButton>
+                            <OpenInBrowser />
+                        </IconButton>
                     </Paper>
                 </Grid>
             </Grid>
